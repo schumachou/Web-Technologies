@@ -14,5 +14,6 @@ Responsive Web Design
 * Create a PHP script to return a JSON formatted data stream to the front-end
 * The client parses the JSON data and renders it in a nicer-looking, responsive UI
 ## HW9
+iOS App Design
 * Build a iOS app for Facebook Search using the Facebook Graph API
 * Add social networking features using the Facebook SDK for IOS
