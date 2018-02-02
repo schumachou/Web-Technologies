@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Aircraft</title>
+<style>
+input[type=submit]:hover {
+        color: #FFF;
+}
+</style>
+<!--
+<BODY>
+This is for USC disclaimer
+</BODY>
+-->
+<script>
+var empty = false;
+function generateHTML(xmlDoc){  
+    ELEMENT_NODE = 1;// MS parser doesn't define Node.ELEMENT_NODE
+    root=xmlDoc.DocumentElement;
+    html_text="<html><head><title>XML Parse Result</title></head><body>";
+    html_text+="<table border='2'>";
+
+    html_text+="<tbody>";
+    html_text+="<tr>";
+    
+    planes=xmlDoc.getElementsByTagName("Header");
+    planeNodeList=planes[0].childNodes;
+    x=240;  y=120;
+    // output the headers
+    for(i=0;i<planeNodeList.length;i++){
+        if(planeNodeList.item(i).nodeType==ELEMENT_NODE){
+                html_text+="<th>"+planeNodeList.item(i).innerHTML+"</th>";  
+        }   
+    }
+    
+    html_text+="</tr>";
+    planes=xmlDoc.getElementsByTagName("Row");
+    if(planes.length == 0){//check whether the airline companies is empty
+        alert(" XML file containing NO airline companies");
+        empty = true;
+    }
+    
+    // output out the values
+    for(i=0;i<planes.length;i++){//do for all planes
+        planeNodeList=planes.item(i).childNodes; //get properties of a plane
+        html_text+="<tr>";//start a new row of the output table
+        for(j=0;j<planeNodeList.length;j++){
+            if(planeNodeList.item(j).nodeType==ELEMENT_NODE){
+                if(planeNodeList.item(j).nodeName=="Plane"){
+                    html_text+="<td><img src='"+planeNodeList.item(j).innerHTML+"' width='"+x+"' height='"+y+"'></td>";  
+                }else if(planeNodeList.item(j).nodeName=="HomePage"){
+                    html_text+="<td><a href='"+planeNodeList.item(j).innerHTML+"'>"+planeNodeList.item(j).innerHTML+"</a></td>";  
+                }else if(planeNodeList.item(j).nodeName=="Hubs"){
+                    html_text+="<td><ul>";
+                    hubNodeList=planeNodeList.item(j).childNodes;
+                    for(k=0;k<hubNodeList.length;k++){
+                        if(hubNodeList.item(k).nodeType==ELEMENT_NODE){
+                            if(k==1) html_text+="<li><b>"+hubNodeList.item(k).innerHTML+"</b></li>"
+                            else html_text+="<li>"+hubNodeList.item(k).innerHTML+"</li>"
+                        }
+                    }
+                    html_text+="</ul></td>";
+                }else{
+                    html_text+="<td>"+planeNodeList.item(j).innerHTML+"</td>";
+                }   
+            }    
+        }
+        html_text+="</tr>";  
+    }
+    html_text+="</tbody>";  html_text+="</table>";
+    html_text+="</body></html>";  
+}
+    
+function viewXML(what){
+    
+    //var a = document.body.getElementsByTagName("input").item(1);
+    //a.setAttribute("style","color:white;background-color:#C0C0C0;border-radius:4px;");
+    var URL = what.URL.value;
+    if(URL == ""){//Chck whether text box is empty
+        alert("Text box is empty");
+        return;
+    }
+    var xmlDoc;
+    function loadXML(url){
+        if(window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }else{// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.open("GET",url,false);
+        xmlhttp.send();
+        xmlDoc=xmlhttp.responseXML;
+        if(xmlDoc == null){
+            if(xmlhttp.status == 404) alert("File does not exist");//check whether file exist
+            else alert("Error in XML file");//check whether XML is parsed correctly
+            return;
+        }
+        return xmlDoc;   
+    }
+    xmlDoc = loadXML(URL);
+    if (window.ActiveXObject){//if IE, simply execute script (due to async prop).
+        if(xmlDoc.parseError.errorCode != 0){
+            var myErr = xmlDoc.parseError;
+            generateError(xmlDoc);
+            hWin = window.open("", "Error", "height=300,width=340");
+            hWin.document.write(html_text);
+        }else{
+            generateHTML(xmlDoc);
+            hWin = window.open("", "Assignment4", "height=800,width=600");
+            hWin.document.write(html_text);   
+        }
+    }else{//else if FF, execute script once XML object has loaded
+        xmlDoc.onload=generateHTML(xmlDoc);
+        if(empty) return;
+        hWin = window.open("", "Assignment4", "scrollbars=yes,left=100,height=800,width=945");
+        hWin.document.write(html_text);  
+    }
+}
+</script>
+</head>
+<body style="text-align:center;">
+<h1 style="font-size:22px;padding-top:100px">Enter URL for Airlines List XML File</h1>
+<form name="myform" method="POST" id="location" action="javascript:void(0);">
+    <input type="text" name="URL" maxlength="255" size="30">
+    <br><br>
+    <input type="submit" name="submit" value="Submit Query" style="background-color:#C0C0C0;border-radius:4px;" onClick="viewXML(this.form)">
+    <!--    
+    <button onClick="viewXML(this.form)" style="background-color:#C0C0C0;border-radius:4px;">Submit Query</button>
+    -->
+</form>
+</body>
+</html>

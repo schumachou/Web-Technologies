@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/Alamofire/Source/ParameterEncoding.swift"
+            timestampString = "514180071.339974"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "HTTPMethod"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alamofire.HTTPMethod.init (rawValue : Swift.String) -&gt; Swift.Optional&lt;Alamofire.HTTPMethod&gt;"
+                  moduleName = "Alamofire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/Pods/Alamofire/Source/ParameterEncoding.swift"
+                  timestampString = "514283220.098506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alamofire.HTTPMethod.rawValue.getter : Swift.String"
+                  moduleName = "Alamofire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/Pods/Alamofire/Source/ParameterEncoding.swift"
+                  timestampString = "514283220.101028"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "110">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/SearchResultsViewController.swift"
+            timestampString = "514805738.474071"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "setupViews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/SearchResultsViewController.swift"
+            timestampString = "514805738.474071"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "tabBar(_:didSelect:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/SearchResultsViewController.swift"
+            timestampString = "514583683.287176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "SearchResultsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.SearchResultsViewController.userVC.getter : CS571_HW9.UsersResultViewController"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/SearchResultsViewController.swift"
+                  timestampString = "514588439.926387"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.SearchResultsViewController.init (withJSON : SwiftyJSON.JSON) -&gt; CS571_HW9.SearchResultsViewController"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/SearchResultsViewController.swift"
+                  timestampString = "514588439.929326"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "526">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.SearchResultsViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CS571_HW9.SearchResultsViewController&gt;"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/SearchResultsViewController.swift"
+                  timestampString = "514588439.931951"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "269">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/SearchResultsViewController.swift"
+            timestampString = "514718410.277175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/SearchResultsViewController.swift"
+            timestampString = "514585248.518134"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "SearchResultsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.SearchResultsViewController.pageVC.getter : CS571_HW9.PagesResultViewController"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/SearchResultsViewController.swift"
+                  timestampString = "514588439.946366"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.SearchResultsViewController.init (withJSON : SwiftyJSON.JSON) -&gt; CS571_HW9.SearchResultsViewController"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/SearchResultsViewController.swift"
+                  timestampString = "514588439.948937"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "619">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.SearchResultsViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CS571_HW9.SearchResultsViewController&gt;"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/SearchResultsViewController.swift"
+                  timestampString = "514588439.950958"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "307">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/SearchResultsViewController.swift"
+            timestampString = "514805738.474071"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "tabBar(_:didSelect:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailAlbumsViewController.swift"
+            timestampString = "514680811.62898"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "jsonData"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/FavoriteViewController.swift"
+            timestampString = "514718588.200722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/PlacesResultViewController.swift"
+            timestampString = "514840060.649657"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "jsonData"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailAlbumsViewController.swift"
+            timestampString = "515025221.431443"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "setupViews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/PagesFavoriteViewController.swift"
+            timestampString = "514891190.683465"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailViewController.swift"
+            timestampString = "515017791.181836"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "showMore()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.ResultDetailViewController.showMore () -&gt; ()"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/ResultDetailViewController.swift"
+                  timestampString = "514925929.189546"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
+                  offsetFromSymbolStart = "1314">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.ResultDetailViewController.(showMore () -&gt; ()).(closure #2)"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/ResultDetailViewController.swift"
+                  timestampString = "514925929.191682"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailViewController.swift"
+            timestampString = "515017791.181836"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "showMore()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.ResultDetailViewController.showMore () -&gt; ()"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/ResultDetailViewController.swift"
+                  timestampString = "514926604.819214"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "1047">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.ResultDetailViewController.(showMore () -&gt; ()).(closure #1)"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/ResultDetailViewController.swift"
+                  timestampString = "514926604.821498"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailViewController.swift"
+            timestampString = "515017791.181836"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "showMore()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/PagesResultViewController.swift"
+            timestampString = "514941069.226877"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailViewController.swift"
+            timestampString = "515021471.753528"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
+            landmarkName = "showMore()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.ResultDetailViewController.showMore () -&gt; ()"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/ResultDetailViewController.swift"
+                  timestampString = "514965020.661049"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "307"
+                  endingLineNumber = "307"
+                  offsetFromSymbolStart = "1720">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.ResultDetailViewController.(showMore () -&gt; ()).(closure #3)"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/ResultDetailViewController.swift"
+                  timestampString = "514965020.663282"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "307"
+                  endingLineNumber = "307"
+                  offsetFromSymbolStart = "2655">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailViewController.swift"
+            timestampString = "515021471.753528"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
+            landmarkName = "showMore()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.ResultDetailViewController.showMore () -&gt; ()"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/ResultDetailViewController.swift"
+                  timestampString = "514966114.395872"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "327"
+                  endingLineNumber = "327"
+                  offsetFromSymbolStart = "1720">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CS571_HW9.ResultDetailViewController.(showMore () -&gt; ()).(closure #3)"
+                  moduleName = "CS571_HW9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ChrisChou/Desktop/571_HW/HW9/hw9-iso_app/CS571_HW9/ResultDetailViewController.swift"
+                  timestampString = "514966114.398432"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "327"
+                  endingLineNumber = "327"
+                  offsetFromSymbolStart = "1488">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailViewController.swift"
+            timestampString = "515021471.753528"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "369"
+            endingLineNumber = "369"
+            landmarkName = "showMore()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailViewController.swift"
+            timestampString = "515021471.753528"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "311"
+            endingLineNumber = "311"
+            landmarkName = "showMore()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailAlbumsViewController.swift"
+            timestampString = "515025221.431443"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "jsonData"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS571_HW9/ResultDetailAlbumsViewController.swift"
+            timestampString = "515029692.321051"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

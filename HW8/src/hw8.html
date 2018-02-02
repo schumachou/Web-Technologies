@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Mobile first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <!-- Load Angular JS animation-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+  <!-- Moment.js -->
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+  <script src="https://momentjs.com/downloads/moment-timezone.min.js"></script>
+  
+  <script src="myScript.js"></script>
+  <link rel="stylesheet" href="myStyle.css">
+</head>
+<body ng-app="myApp">
+  <div class="container" ng-controller="myCtrl">
+  
+    <!-- header -->
+     <div class="row" style="background-color:#F8F8F8;border-bottom:1px solid #D2D2D2;padding:10px">
+      <div class="col-md-3 col-sm-12" style="padding:6px 25px;font-size:16px;color:#3B5998;">FB Search</div>
+      <div class="col-md-6 col-sm-12">
+        <form>
+          <div class="input-group">
+            <input id="search" type="search" name="keyword" class="form-control right_corner" ng-model="keyword" placeholder="type something...">
+            <div class="input-group-btn">
+              <button class="btn right_corner" type="submit" style="background-color:#3B5998;width:60px;" ng-click="search()">
+                <i class="glyphicon glyphicon-search" style="color:white;"></i>
+              </button>
+              <button type="reset" class="btn btn-default right_corner" ng-click="clear()" style="color:#3B5998;border:1px solid #3B5998;margin-left:20px;">Clear</button>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+ 
+  <!-- tabs for navigation -->
+    <ul class="nav nav-tabs nav-justified" style="border-bottom:2px solid #3B5998">
+      <li class="active"><a data-toggle="tab" href="#user" ng-click="type='user'" >Users</a></li>
+      <li><a data-toggle="tab" href="#page" ng-click="type='page'">Pages</a></li>
+      <li><a data-toggle="tab" href="#event" ng-click="type='event'">Events</a></li>
+      <li><a data-toggle="tab" href="#place" ng-click="type='place'">Places</a></li>
+      <li><a data-toggle="tab" href="#group" ng-click="type='group'">Groups</a></li>
+      <li><a data-toggle="tab" href="#favorite" ng-click="updateFavorite()">Favorites</a></li>
+    </ul>
+
+    <div class="tab-content animation_left" ng-show="showTable">
+      
+      <!-- user -->
+      <div id="user" class="tab-pane fade in active">
+        <div class="table-responsive"><!--scroll horizontally on small devices (under 768px)-->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Profile photo</th>
+                <th>Name</th>
+                <th>Favorite</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="x in user.data">
+                <td>{{ $index + 1 }}</td>
+                <td><img class="img-circle" src="{{x.picture.data.url}}" height="40" width="40"></td>
+                <td>{{x.name}}</td>
+                <td><button type="button" class="btn btn-default" ng-click="favorite(x.id,x.picture.data.url,x.name)"><span class="glyphicon" ng-class="{true:'glyphicon-star',false:'glyphicon-star-empty'}[isFavorite(x.id)]"></span></button></td>
+                <td><button type="button" class="btn btn-default" ng-click="detail(x.id,x.picture.data.url,x.name)"><span class="glyphicon glyphicon-chevron-right"></span></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- pagination -->
+        <div style="display:flex;justify-content:center;">
+          <button type="button" class="btn btn-default" ng-show="user.paging.hasOwnProperty('previous')" ng-click="previous('user')" style="width:100px;margin:10px;">Previous</button>
+          <button type="button" class="btn btn-default" ng-show="user.paging.hasOwnProperty('next')" ng-click="next('user')" style="width:100px;margin:10px;">Next</button>
+        </div>
+      </div>
+      
+      <!-- page -->
+      <div id="page" class="tab-pane fade">
+        <div class="table-responsive"><!--scroll horizontally on small devices (under 768px)-->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Profile photo</th>
+                <th>Name</th>
+                <th>Favorite</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="x in page.data">
+                <td>{{ $index + 1 }}</td>
+                <td><img class="img-circle" src="{{x.picture.data.url}}" height="40" width="40"></td>
+                <td>{{x.name}}</td>
+                <td><button type="button" class="btn btn-default" ng-click="favorite(x.id,x.picture.data.url,x.name)"><span class="glyphicon" ng-class="{true:'glyphicon-star',false:'glyphicon-star-empty'}[isFavorite(x.id)]"></span></button></td>
+                <td><button type="button" class="btn btn-default" ng-click="detail(x.id,x.picture.data.url,x.name)"><span class="glyphicon glyphicon-chevron-right"></span></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- pagination -->
+        <div style="display:flex;justify-content:center;">
+          <button type="button" class="btn btn-default" ng-show="page.paging.hasOwnProperty('previous')" ng-click="previous('page')" style="width:100px;margin:10px;">Previous</button>
+          <button type="button" class="btn btn-default" ng-show="page.paging.hasOwnProperty('next')" ng-click="next('page')" style="width:100px;margin:10px;">Next</button>
+        </div>
+      </div>
+      
+      <!-- event -->
+      <div id="event" class="tab-pane fade">
+        <div class="table-responsive"><!--scroll horizontally on small devices (under 768px)-->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Profile photo</th>
+                <th>Name</th>
+                <th>Favorite</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="x in event.data">
+                <td>{{ $index + 1 }}</td>
+                <td><img class="img-circle" src="{{x.picture.data.url}}" height="40" width="40"></td>
+                <td>{{x.name}}</td>
+                <td><button type="button" class="btn btn-default" ng-click="favorite(x.id,x.picture.data.url,x.name)"><span class="glyphicon" ng-class="{true:'glyphicon-star',false:'glyphicon-star-empty'}[isFavorite(x.id)]"></span></button></td>
+                <td><button type="button" class="btn btn-default" ng-click="detail(x.id,x.picture.data.url,x.name)"><span class="glyphicon glyphicon-chevron-right"></span></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- pagination -->
+        <div style="display:flex;justify-content:center;">
+          <button type="button" class="btn btn-default" ng-show="event.paging.hasOwnProperty('previous')" ng-click="previous('event')" style="width:100px;margin:10px;">Previous</button>
+          <button type="button" class="btn btn-default" ng-show="event.paging.hasOwnProperty('next')" ng-click="next('event')" style="width:100px;margin:10px;">Next</button>
+        </div>
+      </div>
+      
+      <!-- place -->
+      <div id="place" class="tab-pane fade">
+        <div class="table-responsive"><!--scroll horizontally on small devices (under 768px)-->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Profile photo</th>
+                <th>Name</th>
+                <th>Favorite</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="x in place.data">
+                <td>{{ $index + 1 }}</td>
+                <td><img class="img-circle" src="{{x.picture.data.url}}" height="40" width="40"></td>
+                <td>{{x.name}}</td>
+                <td><button type="button" class="btn btn-default" ng-click="favorite(x.id,x.picture.data.url,x.name)"><span class="glyphicon" ng-class="{true:'glyphicon-star',false:'glyphicon-star-empty'}[isFavorite(x.id)]"></span></button></td>
+                <td><button type="button" class="btn btn-default" ng-click="detail(x.id,x.picture.data.url,x.name)"><span class="glyphicon glyphicon-chevron-right"></span></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- pagination -->
+        <div style="display:flex;justify-content: center;">
+          <button type="button" class="btn btn-default" ng-show="place.paging.hasOwnProperty('previous')" ng-click="previous('place')" style="width:100px;margin:10px;">Previous</button>
+          <button type="button" class="btn btn-default" ng-show="place.paging.hasOwnProperty('next')" ng-click="next('place')" style="width:100px;margin:10px;">Next</button>
+        </div>
+      </div>
+      
+      <!-- group -->
+      <div id="group" class="tab-pane fade">
+        <div class="table-responsive"><!--scroll horizontally on small devices (under 768px)-->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Profile photo</th>
+                <th>Name</th>
+                <th>Favorite</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="x in group.data">
+                <td>{{ $index + 1 }}</td>
+                <td><img class="img-circle" src="{{x.picture.data.url}}" height="40" width="40"></td>
+                <td>{{x.name}}</td>
+                <td><button type="button" class="btn btn-default" ng-click="favorite(x.id,x.picture.data.url,x.name)"><span class="glyphicon" ng-class="{true:'glyphicon-star',false:'glyphicon-star-empty'}[isFavorite(x.id)]"></span></button></td>
+                <td><button type="button" class="btn btn-default" ng-click="detail(x.id,x.picture.data.url,x.name)"><span class="glyphicon glyphicon-chevron-right"></span></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- pagination -->
+        <div style="display:flex;justify-content:center;">
+          <button type="button" class="btn btn-default" ng-show="group.paging.hasOwnProperty('previous')" ng-click="previous('group')" style="width:100px;margin:10px;">Previous</button>
+          <button type="button" class="btn btn-default" ng-show="group.paging.hasOwnProperty('next')" ng-click="next('group')" style="width:100px;margin:10px;">Next</button>
+        </div>
+      </div>
+      
+      <!-- favorite -->
+      <div id="favorite" class="tab-pane fade">
+       <div class="table-responsive"><!-- scroll horizontally on small devices (under 768px)-->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Profile photo</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Favorite</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="x in ARRAY">
+                <td>{{$index + 1}}</td>
+                <td><img class="img-circle" src="{{x.url}}" height="40" width="40"></td>
+                <td>{{x.name}}</td>
+                <td>{{x.type}}</td>
+                <td><button type="button" class="btn btn-default" ng-click="favorite(x.id,x.url,x.name)"><span class="glyphicon glyphicon-trash"></span></button></td>
+                <td><button type="button" class="btn btn-default" ng-click="detail(x.id,x.url,x.name)"><span class="glyphicon glyphicon-chevron-right"></span></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    </div><!-- tab-content -->
+    
+    <!-- progress bar -->
+    <div class="progress" style="margin:200px 150px" ng-show="showProgressBar1">
+      <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+      </div>
+    </div>
+    
+    <!-- detailInfo -->
+    <div class="animation_right" ng-show="showDetail">
+
+      <div style="margin:15px 0px">
+        <button type="button" class="btn btn-default" ng-click="showDetail=false;showTable=true;showInnerPanel=false"><span class="glyphicon glyphicon-chevron-left">Back</span></button>
+        <span style="float:right">
+          <button type="button" class="btn btn-default" ng-click="favorite(id,url,name)"><span class="glyphicon" ng-class="{true:'glyphicon-star',false:'glyphicon-star-empty'}[isFavorite(id)]"></span></button>
+          <button type="button" class="btn btn-default" style="margin-left:20px" ng-click="shareOnFB(url,name)"><img src="facebook.png" width="20px"></button>
+        </span>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Albums</div>
+            <div class="panel-body">
+
+              <!-- progress bar -->
+              <div class="progress" style="margin:15px 0px" ng-show="showProgressBar2">
+                <div class="progress-bar progress-bar-striped active" role="progressbar"
+            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                </div>
+              </div>
+
+              <!-- InnerPanel -->
+              <div ng-show="showInnerPanel">
+                <!-- no data -->
+                <div class="panel panel-warning" ng-hide="detailInfo.hasOwnProperty('albums')">
+                  <div class="panel-heading">No data found.</div>
+                </div>
+                <!-- panel-group -->
+                <div class="panel-group" id="album_accordion" ng-show="detailInfo.hasOwnProperty('albums')">
+                  <div class="panel panel-default" ng-repeat="x in detailInfo.albums.data">
+                    <div class="panel-heading">
+<!--                        <h4 class="panel-title">-->
+                        <a data-toggle="collapse" data-parent="#album_accordion" href="#album_collapse{{$index}}">{{x.name}}</a>
+<!--                        </h4>-->
+                    </div>
+                    <div id="album_collapse{{$index}}" class="panel-collapse collapse" ng-class="{'in':$first}"> 
+                      <div class="panel-body">
+                        <img src="https://graph.facebook.com/v2.8/{{y.id}}/picture?access_token=EAAFvWSvv8dUBANa7EonctP6hcNZC8uDtvkMTdYYiMAyEGwwOdjOz9GmdITVzx7NzHrOpVz69iFoz0FHc5D4oESc8nHYvFEb6YpHj0bUMSrSdISBlmwU2sC0LN5ayTbJl7oOYjMTCrCrZAR9Vgt" ng-repeat="y in x.photos.data" width="100%">
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- panel-group -->
+              </div><!-- InnerPanel -->
+
+            </div>
+          </div>
+        </div><!--col-sm-6-->
+        
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Posts</div>
+            <div class="panel-body">
+
+              <!-- progress bar -->
+              <div class="progress" style="margin:15px 0px" ng-show="showProgressBar2">
+                <div class="progress-bar progress-bar-striped active" role="progressbar"
+            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                </div>
+              </div>
+
+              <!-- InnerPanel -->
+              <div ng-show="showInnerPanel">
+                <!-- no data -->
+                <div class="panel panel-warning" ng-hide="detailInfo.hasOwnProperty('posts')">
+                  <div class="panel-heading">No data found.</div>
+                </div>
+                <!-- panel-group -->
+                <div class="panel-group" ng-show="detailInfo.hasOwnProperty('posts')">
+                  <div class="panel panel-default" ng-repeat="x in detailInfo.posts.data">
+                    <div class="panel-body">
+                      <table class="table table-condensed">
+                        <tr>
+                          <td style="width:70px;border:0px"><img src="{{url}}" width="50px" height="50px"></td>
+                          <td style="padding-top:13px;border:0px;line-height: 0.8">
+                            <p><b>{{name}}</b></p>
+                            <p style="color:#A1A1A1">{{createdTime(x.created_time)}}</p>
+                          </td>
+                        </tr>
+                        <tr >
+                          <td colspan="2" style="padding-top:30px;border:0px">{{x.message}}</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div><!-- panel-group -->
+              </div><!-- InnerPanel -->
+
+            </div>
+          </div>
+        </div><!--col-sm-6-->
+        
+      </div><!--row-->
+    </div><!--show detail-->
+    
+    <!-- debug info -->
+<!--
+    <p>Latitude : {{position.latitude}}</p>
+    <p>Longitude : {{position.longitude}}</p>
+-->
+<!--
+    <p ng-class="showFavorite()">OBJ : {{OBJ}}</p>
+    <p ng-class="showFavorite()">OBJ.url : {{OBJ.url}}</p>
+-->
+<!--
+    <p ng-class="showFavorite()">JSON : {{JSON}}</p>
+    <p ng-class="showFavorite()">JSON.url : {{JSON.url}}</p>
+-->
+<!--
+    <p ng-class="showFavorite()">ARRAY[0] : {{ARRAY[0]}}</p>
+    <p ng-repeat="x in ARRAY">ARRAY[{{$index+1}}].url : {{x}}</p>
+-->
+
+ 
+  </div><!-- container && myCtrl -->
+
+</body>
+</html>

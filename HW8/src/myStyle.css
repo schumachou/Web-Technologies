@@ -1,0 +1,69 @@
+.right_corner {
+  border-radius: 0px;
+}
+.glyphicon-star{
+  color:#FFD700;
+}
+.animation_left.ng-hide {
+  transform: translate(100%,0);
+}
+.animation_left.ng-hide-remove {
+  -webkit-transition:all 0.4s linear;
+  -moz-transition:all 0.4s linear;
+  -o-transition:all 0.4s linear;
+  transition:all 0.4s linear;
+}
+.animation_right.ng-hide {
+  transform: translate(-100%,0);
+}
+.animation_right.ng-hide-remove {
+  -webkit-transition:all 0.4s linear;
+  -moz-transition:all 0.4s linear;
+  -o-transition:all 0.4s linear;
+  transition:all 0.4s linear;
+}
+.nav-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.nav-tabs.nav-justified > li {
+  float: none;
+}
+.nav-tabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .nav-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+.nav-tabs.nav-justified > li > a {
+  color: #000;
+  margin-right: 0;
+  border-radius: 4px;
+}
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #3B5998;
+  color: #fff;
+  background-color: #3B5998;
+  
+}
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .nav-tabs.nav-justified > .active > a,
+  .nav-tabs.nav-justified > .active > a:hover,
+  .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+

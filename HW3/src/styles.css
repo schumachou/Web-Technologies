@@ -1,0 +1,226 @@
+body{
+    font-family:helvetica;
+    width: 1173px;
+    height: 1195px;
+    position: relative;
+    left: -8px;
+}
+h1 {
+    color: #FFF;
+    font-weight: normal;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-top: 60px;
+}
+p.no13 {
+    color: #FFF;
+    font-size: 60px;
+    border-bottom: 6px solid #FFF;
+    width: 90px;
+    height: 108px;
+    position: relative;
+    text-decoration: none;
+    left: 105px;
+    top: -90px;
+}
+.thirteen { 
+    font-size:120px;
+    position: relative;
+    top: 40px;   
+}
+div.image {
+    position: relative;
+    left: -2px;
+    top: -5px; 
+}
+hr.horiLine1 {
+    width: 350px;
+    margin-top: 20px;
+    border:none;
+    height: 1px;
+    background-color:#CCC;
+} 
+hr.horiLine2 {
+    width: px;
+    margin-top: 10px;
+    border:none;
+    height: 1px;
+    background-color:#3B3B3B;
+} 
+
+div.top {
+    border: 1px solid black;
+    margin-top: 45px;
+    margin-bottom: 50px;
+    margin-right: 360px;
+    margin-left: 371px;
+    background-color: black;
+    height: 260px;
+    width: 430px;
+}
+div.mid {
+    padding: 55px 10px 2px 70px;
+    width: 600px;
+    height: 105px;
+    position: relative;
+    left: 440px;
+    top: 10px;
+    border-left: 1px solid #3B3B3B;
+    
+}    
+div.bottom {
+    width: 1173px;
+    height: 520px;
+    background-color: black;
+    position: relative;
+    top:-145px;
+}
+p.hook {
+    color: #B59B4A;
+    font-size: 14px;
+    letter-spacing: 4.5px;
+    position: relative;
+    left: 390px;
+    top: -292px;
+}   
+p.welcome {
+    line-height: 23px;
+    font-size: 18px;
+    text-align: center;
+    width: 620px;
+    position: relative;
+    left: 272px;
+    top: -280px;  
+}
+.read {
+    color: white;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-decoration: none;
+    position: absolute;
+    left: 75px;
+    top: 99px;    
+}
+.read:hover {
+    text-decoration: underline;
+}
+.read:focus {
+    text-decoration: underline ;
+}
+p.sign {
+    color: #B59B4A;
+    position: relative; 
+    font-size: 12px;
+    letter-spacing: 5px;
+    left: 506px;
+    top: 62px;
+}
+.inputBar{
+    font-size: 16px;
+    width: 310px;
+    height: 40px;
+}
+.button {
+    
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.button1 {
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    position: relative;
+    left: 443px;
+    top: -245px;
+    padding: 20px 67px;
+}
+.button1:hover {
+    background-color: black;
+    color: white;
+}
+.button1:focus {
+    background-color: black;
+    color: white;
+}
+.button2 {
+    background-color: black;
+    color: white;
+    border: 3px solid #FFF;
+    padding: 3px 10px;
+    width: 230px;
+    height: 60px;
+    margin-left: 5px;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+.button2:hover {
+    background-color: white;
+    color: black;
+} 
+.button3 {
+    background-color: black;
+    color: white;
+    border: 3px solid #FFF;
+    font-size:10px;
+    letter-spacing: 4px;
+    padding: 10px 35px 
+}
+.button3:hover {
+    background-color: white;
+    color: black;
+} 
+.button3:focus {
+    background-color: white;
+    color: black;
+} 
+table, th, td { 
+    color: white;
+    /*background-color: black;*/
+    border-collapse: collapse;
+    
+    text-align: left;
+    font-size: 14px;
+    padding-bottom: 4px;
+    padding-left: 46px;
+    
+}
+th {
+    padding-bottom:20px;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+td.subtitle {
+    padding-bottom:20px;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+td.T, td.E {
+    position: relative;
+    left: 89px;
+    top: -10px;
+}
+.r1 {
+    position: relative;
+    left: 70px;
+}
+.r2 {
+    position: relative;
+    left: 45px;
+}
+.r3 {
+    position: relative;
+    left: 28px;
+}
+.lastRow {
+    padding-top: 23px;    
+}
+.mail:hover {
+    text-decoration: none;
+}
